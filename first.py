@@ -31,6 +31,8 @@ print('pop(0)', num.pop(0))
 print('数组：', num)
 num.insert(0, 1)
 print("insert 0", num)
+num.append(3)
+print("append 3", num)
 for n in num:
     print(n)
 su = 0
@@ -51,8 +53,17 @@ def my_abs(x):
 print('my_abs(-50) = ', my_abs(-50))
 
 
-# 请定义一个函数quadratic(a, b, c)，接收3个参数，返回一元二次方程：
-# ax2 + bx + c = 0
-# 的两个解。
-def quadratic(a, b, c):
-    pass
+def power(a, b=2):
+    r = 1
+    while b > 0:
+        r = r * a
+        b -= 1
+    return r
+
+
+print('5^2 = ', power(5))
+print('5^5 = ', power(5, 5))
+
+print('num[0:2]', num[0:2])
+print(num)
+print('num[-2:]', num[-2:])
