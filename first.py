@@ -23,7 +23,7 @@ print('%.2f' % 3.1415926)
 num = [1, 2, 3]
 print('数组：', num)
 print('num[0]:', num[0])
-print('num[-1]', num[-1])
+print('num[-3]', num[-3])
 print('length:', len(num))
 print('pop:', num.pop())
 print('数组：', num)
