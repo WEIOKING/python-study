@@ -1,6 +1,8 @@
-# 变量可以指向函数
+# 导入functools文件的reduce函数
 from functools import reduce
 
+
+# 变量可以指向函数
 f = abs
 print('f = abs f(-11)', f(-11))
 
@@ -8,6 +10,7 @@ print('f = abs f(-11)', f(-11))
 # 传入函数
 #   既然变量可以指向函数，函数的参数能接收变量，那么一个函数就可以接收另一个函数作为参数，这种函数就称之为高阶函数。
 def add(x, y, fun):
+    """两值在函数处理后求和"""
     return fun(x) + fun(y)
 
 
@@ -20,6 +23,7 @@ print('add(-5, 6, abs)', add(-5, 6, abs))
 #   map()传入的第一个参数是f，即函数对象本身。由于结果r是一个Iterator，Iterator是惰性序列，因此通过list()函数让它把整个
 # 序列都计算出来并返回一个list。
 def square(x):
+    """求平方"""
     return x * x
 
 
@@ -40,8 +44,8 @@ print('reduce(fn, list(range(1, 6)))', reduce(fn, list(range(1, 6))))
 #   filter()接收一个函数和一个序列。filter()把传入的函数依次作用于每个元素，然后根据返回值是True还是False决定保留还是
 # 丢弃该元素。
 
-# 1到正无穷数的生成器
 def num_iter():
+    """1到正无穷数的生成器"""
     n = 1
     while True:
         n = n + 1

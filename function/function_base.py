@@ -3,6 +3,11 @@ import math
 
 
 def my_abs(x):
+    """
+    求输入值的绝对值
+    :param x:
+    :return:
+    """
     # 使用isinstance方法对参数类型进行检测，类型错误则返回异常
     if not isinstance(x, (int, float)):
         raise TypeError('bad operand type')
